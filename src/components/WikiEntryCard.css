@@ -1,0 +1,41 @@
+.wiki-entry-card {
+    background-color: var(--navbar-bg-light);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.wiki-entry-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .wiki-entry-card {
+    background-color: var(--navbar-bg-dark);
+}
+
+.wiki-entry-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    color: var(--text-color-light);
+    font-weight: 600;
+}
+
+body.dark .wiki-entry-card h3 {
+    color: var(--text-color-dark);
+}
+
+.wiki-entry-card p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--text-color-light);
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+body.dark .wiki-entry-card p {
+    color: var(--text-color-dark);
+}

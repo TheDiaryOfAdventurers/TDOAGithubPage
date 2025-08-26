@@ -1,0 +1,93 @@
+.navbar-capsule {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the main links container */
+    padding: 12px 0; /* Increased vertical padding for more height */
+    width: 100%;
+    height: 2.5em;
+    background-color: var(--navbar-bg-light);
+    transition: background-color 0.2s ease-in-out;
+    position: relative; /* Anchor for the actions container */
+}
+
+body.dark .navbar-capsule {
+    background-color: var(--navbar-bg-dark);
+}
+
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-link {
+    position: relative;
+    padding: 10px 22px;
+    cursor: pointer;
+    color: var(--text-color-light);
+    font-weight: 525;
+    z-index: 2;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+body.dark .nav-link {
+    color: var(--text-color-dark);
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background-color: var(--navbar-indicator-bg-light);
+    border-radius: 9999px;
+    z-index: -1;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .nav-link.active::before {
+    background-color: var(--navbar-indicator-bg-dark);
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.nav-actions-container {
+    position: absolute;
+    right: 20px; /* Position to the far right */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.nav-action-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-light);
+    border-radius: 50%;
+}
+
+.nav-link-button {
+    margin-left: 1em; /* Space between last link and search */
+}
+
+body.dark .nav-action-button {
+    color: var(--text-color-dark);
+}
+
+.nav-action-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark .nav-action-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
