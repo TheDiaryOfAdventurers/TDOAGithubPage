@@ -1,0 +1,40 @@
+.capsule {
+    display: inline-flex; /* Use flexbox for alignment */
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide anything that might stick out of the rounded corners */
+    padding: 0; /* Remove padding from the capsule itself */
+
+    /* Default (Light Theme) Colors */
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+/* Style for links or buttons inside the capsule */
+.capsule a,
+.capsule button {
+    padding: 4px 12px; /* Apply padding here instead */
+    background-color: transparent;
+    color: inherit; /* Inherit text color from the capsule */
+    border: none; /* Remove default button border */
+    text-decoration: none; /* Remove default link underline */
+    cursor: pointer;
+    font-family: inherit; /* Ensure font is the same */
+    font-size: inherit;
+    font-weight: inherit;
+    width: 100%; /* Make it fill the capsule */
+    text-align: center;
+}
+
+/* Dark Theme Colors */
+body.dark .capsule {
+    background-color: #343a40;
+    color: #e9ecef;
+    border: 1px solid #495057;
+}

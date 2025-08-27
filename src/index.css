@@ -1,32 +1,34 @@
 :root {
-  --text-color-light: #282c34;
-  --navbar-bg-light: #f2f3f6; /* Outer capsule: light gray */
-  --navbar-indicator-bg-light: #e3e5e8; /* Inner capsule: darker gray */
-  --button-bg-light: #f2f3f6;
+    --text-color-light: #282c34;
+    --navbar-bg-light: #f2f3f6; /* Outer capsule: light gray */
+    --navbar-indicator-bg-light: #e3e5e8; /* Inner capsule: darker gray */
+    --button-bg-light: #f2f3f6;
+    --background-color-light: #ffffff;
 
-  --text-color-dark: #ffffff;
-  --navbar-bg-dark: #212122; /* Outer capsule: dark gray */
-  --navbar-indicator-bg-dark: #3c3e41; /* Inner capsule: lighter gray */
-  --button-bg-dark: #212122;
+    --text-color-dark: #ffffff;
+    --navbar-bg-dark: #212122; /* Outer capsule: dark gray */
+    --navbar-indicator-bg-dark: #3c3e41; /* Inner capsule: lighter gray */
+    --button-bg-dark: #212122;
+    --background-color-dark: #1a1a1a
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Apply the background color directly to the body */
-  background-color: #ffffff; /* Default light mode background */
-  transition: background-color 0.2s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Apply the background color directly to the body */
+    background-color: #ffffff; /* Default light mode background */
+    transition: background-color 0.2s ease-in-out;
 }
 
 body.dark {
-  background-color: #1a1a1a; /* Dark mode background */
+    background-color: #1a1a1a; /* Dark mode background */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
