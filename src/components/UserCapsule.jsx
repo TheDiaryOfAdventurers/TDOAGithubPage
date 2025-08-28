@@ -1,14 +1,10 @@
 import React from 'react'
-import './widgets/Capsule.jsx'
-import './UserCapsule.css'
 import Capsule from "./widgets/Capsule.jsx";
+import {isUserLoggedIn} from "../utils/userStatus.jsx";
+import './UserCapsule.css'
 
 // 1. 让组件接收 onLoginClick 属性
-const UserCapsule = ({ onLoginClick }) => {
-    const isUserLoggedIn = () => {
-        const token = sessionStorage.getItem('userToken')
-        return token !== null;
-    }
+const UserCapsule = ({onLoginClick, onLogoutClick}) => {
 
     const unloggedContent = (
         <Capsule className="user-profile-layout">
@@ -20,7 +16,13 @@ const UserCapsule = ({ onLoginClick }) => {
 
     const loggedContent = (
         <Capsule className="user-profile-layout">
-            <div>登录好了</div>
+            <div>已登录，账户：
+                <br/>
+                <strong>
+                    {sessionStorage.getItem('username') ? sessionStorage.getItem('username') : "怎么获取不到啊..."}
+                </strong>
+            </div>
+            <button onClick={onLogoutClick}>退出登录</button>
         </Capsule>
     )
 

@@ -4,12 +4,14 @@
     --navbar-indicator-bg-light: #e3e5e8; /* Inner capsule: darker gray */
     --button-bg-light: #f2f3f6;
     --background-color-light: #ffffff;
+    --secondary-text-color-light: #6c757d;
 
     --text-color-dark: #ffffff;
     --navbar-bg-dark: #212122; /* Outer capsule: dark gray */
     --navbar-indicator-bg-dark: #3c3e41; /* Inner capsule: lighter gray */
     --button-bg-dark: #212122;
-    --background-color-dark: #1a1a1a
+    --background-color-dark: #1a1a1a;
+    --secondary-text-color-dark: #adb5bd;
 }
 
 body {

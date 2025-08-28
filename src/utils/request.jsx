@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 
 // 1. 创建axios实例（单独创建，不在这里直接设置拦截器）
 const request = axios.create({
-    baseURL: 'https://77dc499e.r19.vip.cpolar.cn/',
+    baseURL: 'http://localhost:8080',
     timeout: 10000
 });
 

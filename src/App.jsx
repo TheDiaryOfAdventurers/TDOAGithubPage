@@ -5,7 +5,8 @@ import Navbar from './components/Navbar.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ForumPage from './pages/ForumPage.jsx';
 import WikiPage from './pages/WikiPage.jsx';
-import NotFoundPage from './pages/NotFound.jsx'; // 引入 NotFoundPage
+import NotFoundPage from './pages/NotFound.jsx';
+import {useSetupRequestInterceptors} from "./utils/request.jsx";
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
     return (
         <Router>
+            <SetupInterceptors/>
             <div className="App">
                 <Navbar theme={theme} toggleTheme={toggleTheme}/>
                 <Routes>
@@ -24,6 +26,11 @@ function App() {
             </div>
         </Router>
     );
+}
+
+function SetupInterceptors() {
+    useSetupRequestInterceptors()
+    return null
 }
 
 export default App;

@@ -21,12 +21,10 @@
     width: 100%;
     max-width: 400px;
     z-index: 1001;
-    color: var(--text-color-light);
 }
 
 body.dark .modal-content {
     background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
 }
 
 /* Modal Header */
@@ -45,11 +43,6 @@ body.dark .modal-header {
 
 .modal-header h2 {
     margin: 0;
-}
-
-.modal-title-group {
-    /* 这个容器仅用于分组，不需要额外样式 */
-    /* 它会作为 flex 容器中的一个整体项目 */
 }
 
 .close-button {
@@ -97,8 +90,7 @@ body.dark .form-group input {
 }
 
 .btn {
-    padding: 6px 12px;
-    font-size: 0.9em;
+    padding: 10px 15px;
     border: 1px solid transparent;
     border-radius: 4px;
     cursor: pointer;
@@ -113,21 +105,4 @@ body.dark .form-group input {
 body.dark .btn-primary {
     background-color: #0056b3;
     border-color: #0056b3;
-}
-
-.modal-tip-text {
-    font-size: 0.85em; /* 让字体小一点 */
-    color: var(--secondary-text-color-light); /* 使用柔和的次要文字颜色 */
-    margin-top: 4px; /* 和主标题之间留出一点空隙 */
-}
-
-body.dark .modal-tip-text {
-    color: var(--secondary-text-color-dark)
-}
-
-/* 用于在登录/注册模态框之间切换的链接样式 */
-.modal-switch-link {
-    color: #007bff; /* 标准链接颜色 */
-    cursor: pointer;
-    font-weight: 500;
 }

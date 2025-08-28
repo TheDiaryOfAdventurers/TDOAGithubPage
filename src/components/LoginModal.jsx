@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import '../api/auth.jsx'
 import './LoginModal.css';
-import {login, register} from "../api/auth.jsx";
+import {login} from "../api/auth.jsx";
 
-const LoginModal = ({isOpen, onClose}) => {
+const LoginModal = ({isOpen, onClose, onSwitchToRegister}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -11,24 +11,25 @@ const LoginModal = ({isOpen, onClose}) => {
         return null;
     }
 
-    const handleRegister = async () => {
-        await register({username, password})
-    };
-
     const handleLogin = async () => {
-        await login({username, password})
+        await login(username, password)
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        handleLogin();
+        e.preventDefault()
+        handleLogin()
     };
 
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <div className="modal-header">
-                    <h2>登录 / 注册</h2>
+                    <div className="modal-title-group">
+                        <h2>登录</h2>
+                        <div className="modal-tip-text">
+                            还没有账号？去<span className="modal-switch-link" onClick={onSwitchToRegister}>注册</span>
+                        </div>
+                    </div>
                     <button className="close-button" onClick={onClose}>&times;</button>
                 </div>
                 <div className="modal-body">
@@ -55,7 +56,6 @@ const LoginModal = ({isOpen, onClose}) => {
                         </div>
                         <div className="form-actions">
                             <button type="submit" className="btn btn-primary">登录</button>
-                            <button type="button" className="btn" onClick={handleRegister}>注册</button>
                         </div>
                     </form>
                 </div>

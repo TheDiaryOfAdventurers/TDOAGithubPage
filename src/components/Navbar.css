@@ -22,7 +22,7 @@ body.dark .navbar-capsule {
 
 .nav-link {
     position: relative;
-    padding: 10px 18px;
+    padding: 10px 15px;
     cursor: pointer;
     color: var(--text-color-light);
     font-weight: 525;
